@@ -1,6 +1,8 @@
 # react-native-maps-example-module
 Example mini-application with react-native-maps, which also features directions between arbitrary number of waypoints with react-native-maps-directions, and places search with google-places-autocomplete. 
 
+Published for this guide: https://codeburst.io/react-native-build-full-fledged-module-with-google-maps-and-places-apis-ef2f6ccb0964
+
 App has this functionalities:
 - ability to add/remove up to 10 waypoints (max amount is customizable), with LayoutAnimation usage
 - car route between this waypoints, if available, will be drawn on Google Maps

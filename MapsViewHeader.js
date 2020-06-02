@@ -20,7 +20,9 @@ function MapsViewHeader(props) {
         UIManager.setLayoutAnimationEnabledExperimental(true);
       }
     }
+  }, []);
 
+  useEffect(() => {
     props.onChange(waypoints);
   }, [waypoints]);
 

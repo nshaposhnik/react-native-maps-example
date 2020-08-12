@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
-import { Dimensions, TextInput, Text, View, VirtualizedList, UIManager, LayoutAnimation, TouchableOpacity, Image } from "react-native";
+import { Dimensions, TextInput, Text, View, VirtualizedList, UIManager, LayoutAnimation, TouchableOpacity, Image, Platform } from "react-native";
 import { SwipeRow } from 'react-native-swipe-list-view';
 import PropTypes from 'prop-types';
 
@@ -22,9 +22,10 @@ function MapsViewHeader(props) {
     }
   }, []);
 
+  const { onChange } = props;
   useEffect(() => {
-    props.onChange(waypoints);
-  }, [waypoints]);
+    onChange(waypoints);
+  }, [waypoints, onChange]);
 
   const editField = (id, str, geometry) => {
     const waypoint = _.cloneDeep(waypoints[id]);

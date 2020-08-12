@@ -22,10 +22,9 @@ function MapsViewHeader(props) {
     }
   }, []);
 
-  const { onChange } = props;
   useEffect(() => {
-    onChange(waypoints);
-  }, [waypoints, onChange]);
+    props.onChange(waypoints);
+  }, [waypoints]);
 
   const editField = (id, str, geometry) => {
     const waypoint = _.cloneDeep(waypoints[id]);
@@ -76,7 +75,7 @@ function MapsViewHeader(props) {
         disableLeftSwipe={!canDeleteRows()}
       >
         <TouchableOpacity style={styles.removeButton} onPress={() => removeField(item)}>
-          <Image source={require('./icon-trash.png')} style={{ width: 20, height: 25 }} />
+          <Image source={require('../assets/icon-trash.png')} style={{ width: 20, height: 25 }} />
         </TouchableOpacity>
         {renderFieldItem(item)}
       </SwipeRow>

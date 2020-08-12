@@ -31,7 +31,7 @@ function MapsView(props) {
       }
     });
     setCoordinates(res);
-  }
+  };
 
   return (
     <View style={styles.container}>

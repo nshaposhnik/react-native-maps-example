@@ -20,7 +20,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import MapsView from './MapsView';
-import MapsScreen from './MapsScreen';
 import GooglePlacesInput from './GooglePlacesInput';
 
 import {
